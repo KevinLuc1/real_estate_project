@@ -32,7 +32,7 @@ class Listing(models.Model):
     photo_9 = models.ImageField(upload_to='photos/%Y/%m/%d', blank=True)
     photo_10 = models.ImageField(upload_to='photos/%Y/%m/%d', blank=True)
     is_published = models.BooleanField(default=True)
-    list_date = models.DataTimeField(default=datetime.now, blank=True) #import datetime
+    list_date = models.DateTimeField(default=datetime.now, blank=True) #import datetime
 
     #using title to be the main field to be displayed
     def __str__(self):
