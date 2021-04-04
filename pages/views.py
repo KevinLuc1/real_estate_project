@@ -3,6 +3,7 @@ from django.http import HttpResponse
 # Create your views here.
 
 from listings.models import Listing
+from listings.choices import price_choices, bedroom_choices, state_choices
 
 from realtors.models import Realtor
 
@@ -11,7 +12,10 @@ def index(request):
 
     # to pass listings into html, we need to set it up as a dictionary and pass in the dictionary on the return render
     context = {
-        'listings':listings
+        'listings':listings,
+        'state_choices': state_choices,
+        'price_choices': price_choices,
+        'bedroom_choices': bedroom_choices
     }
     return render(request, 'pages/index.html', context) # pass context in index.html under pages app to grab listings 
 
@@ -29,3 +33,7 @@ def about(request):
     }
 
     return render(request, 'pages/about.html', context)
+
+# def search(request):
+
+#     return render(request, 'listings/search.html')
