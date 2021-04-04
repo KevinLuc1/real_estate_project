@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
 from django.core.paginator import EmptyPage, PageNotAnInteger, Paginator
 
 from .models import Listing
@@ -21,8 +21,16 @@ def index(request):
     #w we can instead create a variable as a dictionary and pass in the variable 'context'
     return render(request, 'listings/listings.html', context)
 
-def listing(request, listing_id):
-    return render(request, 'listings/listing.html')
+# listing_id param is passed in through the url.py path'<int:listing_id>' which is through the browser listing/8 etc
+def listing(request, listing_id): 
+    # show 404 page if listing id does not exist
+    listing = get_object_or_404(Listing, pk=listing_id)
+
+    context = {
+        'listing': listing
+    }
+
+    return render(request, 'listings/listing.html', context)
 
 def search(request):
     return render(request, 'listings/search.html')
