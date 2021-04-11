@@ -135,3 +135,10 @@ STATICFILES_DIRS = [
 #define media folder setings
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
+
+# pop up messages, directly from django documentation
+from django.contrib.messages import constants as messages
+MESSAGE_TAGS = {
+    messages.ERROR: 'danger'
+    
+}
