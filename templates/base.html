@@ -15,7 +15,7 @@
     <!-- LightBox -->
     <link rel="stylesheet" href="{% static 'css/lightbox.min.css' %}">
 
-    <title>Real Estate</title>
+    <title>Real Estate {% block title %} {% endblock %} </title>
 </head>
 <body>
     <!-- Pull in top bar from extension file, removes clutter from base.html -->
