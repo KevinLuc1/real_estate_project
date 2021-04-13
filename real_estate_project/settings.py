@@ -29,7 +29,7 @@ SECRET_KEY = ')a)yai85b!@*b=^d_1_pc4wof!c5569&m3s&nj%iu263f+l@cf'
 DEBUG = False
 
 ALLOWED_HOSTS = ['127.0.0.1', 'django-project-real-estate.herokuapp.com']
-django-project-real-estate
+
 
 
 # Application definition
@@ -140,7 +140,7 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
-STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'real_estate_project/static')
