@@ -29,6 +29,7 @@ SECRET_KEY = ')a)yai85b!@*b=^d_1_pc4wof!c5569&m3s&nj%iu263f+l@cf'
 DEBUG = True
 
 ALLOWED_HOSTS = ['127.0.0.1', 'django-realestate-proj.herokuapp.com']
+                               
 
 
 
