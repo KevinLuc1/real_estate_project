@@ -15,6 +15,10 @@ from pathlib import Path
 # import dj_database_url
 import django_heroku
 
+
+
+
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -49,6 +53,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django.contrib.humanize',
+    'cloudinary_storage',
+    'cloudinary',
     
 ]
 
@@ -170,3 +176,10 @@ EMAIL_USE_TLS = True
 
 
 django_heroku.settings(locals())
+
+CLOUDINARY_STORAGE = {
+    'CLOUD_NAME': 'hhmlrrpxg',
+    'API_KEY': '338227766566218',
+    'API_SECRET': 'GPiCB1sntMAmjn3Ui4Q-tRXSEIo',
+}
+DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
